@@ -1,4 +1,4 @@
-import { ADD_JOBS, INC_PAGE } from "./types";
+import { ADD_JOBS, FILTER_JOBS, INC_PAGE } from "./types";
 
 export const addJobs = (jobs) => ({
  type: ADD_JOBS,
@@ -7,4 +7,10 @@ export const addJobs = (jobs) => ({
 
 export const nextBtn = () => ({
   type: INC_PAGE
+})
+
+export const filterJobs = (key, values) => ({
+  type: FILTER_JOBS,
+  key,
+  payload: values
 })
