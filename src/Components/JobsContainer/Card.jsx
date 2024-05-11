@@ -1,11 +1,9 @@
 import React from 'react'
 import { capitalize, getMinExp, getSalary } from '../../utils/commonLib'
 
-const Card = ({job}) => {
-  console.log(job)
-  
-  return (
-    <div className='job-card'>
+
+const Card = React.forwardRef(({job} , ref) => (
+    <div ref = {ref} className='job-card'>
         <div className='company-details'>
           <img src={job.logoUrl} className='logo-image'  alt="not available" />
           <div className='company-details-data'>
@@ -37,7 +35,6 @@ const Card = ({job}) => {
             </button>
         </div>
     </div>
-  )
-}
+  ))
 
 export default Card
