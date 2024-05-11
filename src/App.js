@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
 import './App.css';
+import { useEffect } from 'react';
+import { addJobs } from './redux/actions';
+import { getSampleJdJSON } from './utils/allJobs';
+import JobsContainer from './Components/JobsContainer';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(addJobs(getSampleJdJSON()))  
+  }, [dispatch])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <JobsContainer />
     </div>
   );
 }

@@ -1,0 +1,132 @@
+#jobs-contianer{
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  width: 80%;
+}
+
+.job-card{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 4px;
+  max-height: 650px;
+  border-radius: 8px;
+  align-items: flex-start;
+  border: 1px solid #E3E3E3;
+}
+
+.company-details{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  height: 100px;
+  
+}
+
+.company-details-data{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-image{
+  width: 1.5rem;
+  height: 2.5rem;
+}
+
+.company-details-data span:not(:first-child){
+  font-size: 1rem;
+  color: #505050;
+}
+
+
+
+.company-name{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8B8B8B;
+}
+
+.salary-text{
+  color: #677A8D
+}
+
+.job-details-container{
+  text-align: left;
+  height: 250px;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.job-details-container p {
+  margin-top: 0;
+}
+
+.view-job-btn{
+  position: absolute;
+  top: 175px;
+  height: 70px;
+  left: calc(50%- 20px);
+  color: #4036DB;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.view-job-btn p{
+  margin: 0;
+  cursor: pointer;
+}
+
+
+.min-exp-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+  gap: 0.7rem
+}
+.min-exp-container p{
+  margin: 0;
+}
+
+.min-exp-container p:first-child{
+  color: #8B8B8B;
+  font-weight: 700;
+}
+
+.min-exp-container p:nth-child(2){
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 1.2rem;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 8px;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+}
+.easy-apply-btn{
+  background-color: #54EFC2;
+}
+
+.referral-btn{
+  background-color: #4036DB;
+  color: #C2C1EE;
+}
