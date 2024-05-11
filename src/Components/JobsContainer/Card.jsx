@@ -19,7 +19,7 @@ const Card = React.forwardRef(({job} , ref) => (
         <div className='job-details-container'>
           <p>{job.jobDetailsFromCompany}</p>
           <div className='view-job-btn'>
-            <p>{"View Job"}</p></div>
+            <p onClick={() => {window.open(job.jdLink)}}>{"View Job"}</p></div>
         </div>
         <div className='min-exp-container'> 
           <p>{"Minimum Experience"}</p>

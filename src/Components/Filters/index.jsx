@@ -86,7 +86,7 @@ const Index = () => {
       <MultiSelect multiple={true} value={role} onChange={(o) => handleRoleChange(o) }  placeholder={"Role"} options={roles} />
       <MultiSelect multiple={false} value={experience} onChange={(o) => handleExperience(o)}  placeholder={"Experience"} options={exp} />
       <MultiSelect multiple={true} value={location} onChange={(o) => handleLocation(o)}  placeholder={"Location"} options={locations} />
-      <MultiSelect multiple={false} value={minPay} onChange={(o) => handleMinPay(o)}  placeholder={"Minimum Base Salary Pay"} options={minSalary} />
+      <MultiSelect multiple={false} value={minPay} onChange={(o) => handleMinPay(o)}  placeholder={"Minimum Base Pay"} options={minSalary} />
       <InputBox onChange={debouncedHandleCompanyChange} placeholder={"Search Company"} />
     
     </div>

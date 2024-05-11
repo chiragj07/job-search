@@ -24,13 +24,15 @@ const JobsContainer = () => {
   }, []);
 
   return (
-    <div id='jobs-contianer'>
-      {jobs.length === 0 && <NoJobs />}
-      {jobs.length > 0 && jobs.slice(0, + page * 6 + 6).map((item, ind) => {
+    <>
+    {jobs.length === 0 && <NoJobs />}
+    {jobs.length > 0 && (<div id='jobs-contianer'>
+      {jobs.slice(0, + page * 6 + 6).map((item, ind) => {
       if (ind !== page * 6 + 5) return <Card key={item.jdUid} job={item}/>
       else return <Card ref={lastNodeRef} key={item.jdUid} job={item}/>
       })}
-    </div>
+    </div>)}
+    </>
   )
 }
 
