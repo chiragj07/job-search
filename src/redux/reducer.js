@@ -24,6 +24,7 @@ const reducer = (state= initialState, action) => {
     case FILTER_JOBS:
       return {
         ...state,
+        page: 0,
         jobs: getFilteredJobs(state.allJobs, action.key, action.payload)
 
       }

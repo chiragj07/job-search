@@ -1,8 +1,11 @@
 import React, { useCallback, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Card from './Card';
+import NoJobs from './NoJobs';
+
 import "./styles.css"
 import { nextBtn } from '../../redux/actions';
+
 const JobsContainer = () => {
   const {jobs, page} = useSelector(state => state);
   const observer = useRef();
@@ -22,7 +25,8 @@ const JobsContainer = () => {
 
   return (
     <div id='jobs-contianer'>
-      {jobs.slice(0, + page * 6 + 6).map((item, ind) => {
+      {jobs.length === 0 && <NoJobs />}
+      {jobs.length > 0 && jobs.slice(0, + page * 6 + 6).map((item, ind) => {
       if (ind !== page * 6 + 5) return <Card key={item.jdUid} job={item}/>
       else return <Card ref={lastNodeRef} key={item.jdUid} job={item}/>
       })}
